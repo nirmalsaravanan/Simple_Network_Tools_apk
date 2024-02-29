@@ -11,6 +11,8 @@
 
 ## Usage ##
 #### supports from android 8 above version ####
+#### build the app in android studio ####
+#### navigate to directory where the android project app\build\outputs\apk\debug\app-debug.apk\ ####
 #### download the debug_apk file ####
 
 
