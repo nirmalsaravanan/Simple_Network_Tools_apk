@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:textColor="@color/white">
+
+    <!-- App Name Header -->
+    <TextView
+        android:id="@+id/appNameHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ping Tool"
+        android:textColor="#ff0055"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- IP Address Input -->
+    <EditText
+        android:id="@+id/ipAddressInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter IP Address"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNameHeader"/>
+
+    <!-- Check Connectivity Button -->
+    <Button
+        android:id="@+id/checkConnectivityButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/material_dynamic_tertiary40"
+        android:text="Check Connectivity"
+        android:textColor="#3B84F1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ipAddressInput" />
+
+    <!-- Ping Button -->
+    <Button
+        android:id="@+id/pingButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkConnectivityButton" />
+
+    <!-- Traceroute Button -->
+    <Button
+        android:id="@+id/tracerouteButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Traceroute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pingButton" />
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Network Tools"
+        android:textColor="#fff555"
+        android:textSize="18sp"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tracerouteButton"
+        />
+
+    <!-- Button Layout -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        android:padding="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tracerouteButton">
+
+        <!-- WiFi Channel Button -->
+        <Button
+            android:id="@+id/wifiChannelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WiFi Channel" />
+
+        <!-- DNS Lookup Button -->
+        <Button
+            android:id="@+id/dnsLookupButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="DNS Lookup" />
+
+        <!-- Port Scanner Button -->
+        <Button
+            android:id="@+id/portScannerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Port Scanner" />
+    </LinearLayout>
+
+    <!-- Result Text -->
+
+    <TextView
+        android:id="@+id/resultOutput"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLayout"
+        android:padding="16dp"
+        android:scrollbars="vertical"
+        android:maxLines="100" />
+</androidx.constraintlayout.widget.ConstraintLayout>
